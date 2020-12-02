@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<style>
+    table,th,td
+    {
+        margin-top: 2%;
+        margin-left: 20%;
+        border:2px solid #72dd78;
+    }
+    th,td
+    { 
+        font-size: 1.2em;
+        text-align: center;
+        padding: 20px;
+    }
+    h1
+    {
+        text-align: center;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewels DOM</title>
+</head>
+<body>
+    <button type="button" onclick="loadXML()">Jewellery Details</button>
+    <h1>Jewellery Details</h1>
+    <table id="demo"></table>
+    <script> 
+        function loadXML()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET","jewel.xml",false);
+            xhttp.send(); 
+        }
+        function myFunction(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr>"
+            +"<th>S_No</th>"
+            +"<th>Prod_ID</th>"
+            +"<th>Category</th>"
+            +"<th>Metal</th>"
+            +"<th>Gemstone</th>"
+            +"<th>Price</th>"
+            +"</tr>";
+            var x=xmlDoc.getElementsByTagName("Jewels");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("S_No")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("Prod_ID")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("Category")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("Metal")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("Gemstone")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML=t;
+        }
+    </script>
+</body>
+</html>

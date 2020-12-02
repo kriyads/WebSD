@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="jewelStyling.xsl"?>
+<Jewellery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="jewelSchema.xsd">
+
+<Jewels>
+    <S_No>1</S_No>
+    <Prod_ID>1501</Prod_ID> 
+    <Category>Maang tikka</Category>
+    <Metal>Gold</Metal> 
+    <Gemstone>Ruby</Gemstone> 
+    <Price>&#8377;1000</Price>
+</Jewels>
+
+<Jewels>
+    <S_No>2</S_No> 
+    <Prod_ID>1502</Prod_ID>
+    <Category>Ring</Category>
+    <Metal>Silver</Metal>
+    <Gemstone>Diamond</Gemstone> 
+    <Price>&#8377;2000</Price>
+</Jewels>
+
+<Jewels>
+    <S_No>3</S_No>
+    <Prod_ID>1503</Prod_ID>
+    <Category>Pendant</Category>
+    <Metal>Rosegold</Metal>
+    <Gemstone>Zircon</Gemstone> 
+    <Price>&#8377;1500</Price>
+</Jewels>
+
+<Jewels>
+    <S_No>4</S_No>
+    <Prod_ID>1504</Prod_ID>
+    <Category>Necklace</Category>
+    <Metal>Gold</Metal>
+    <Gemstone>Pearl</Gemstone> 
+    <Price>&#8377;2500</Price>
+</Jewels>
+
+<Jewels>
+    <S_No>5</S_No>
+    <Prod_ID>1505</Prod_ID>
+    <Category>Bracelet</Category>
+    <Metal>Silver</Metal>
+    <Gemstone>Sapphire</Gemstone> 
+    <Price>&#8377;800</Price>
+</Jewels>
+
+<Jewels>
+    <S_No>6</S_No>
+    <Prod_ID>1506</Prod_ID>
+    <Category>Earrings</Category>
+    <Metal>Rosegold</Metal>
+    <Gemstone>Turquoise</Gemstone> 
+    <Price>&#8377;500</Price>
+</Jewels>
+
+</Jewellery>

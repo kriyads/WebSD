@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:simpleType name="product">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minLength value="4"/>
+      <xsd:maxLength value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="metalType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="Gold|Silver|Rosegold"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="amount">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="500"/>
+      <xsd:maxInclusive value="50000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+<xsd:element name="Jewellery">
+  <xsd:complexType>
+    <xsd:sequence>
+      <xsd:element name="Jewels" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="S_No" type="xsd:integer" />
+            <xsd:element name="Prod_ID" type="product" />
+            <xsd:element name="Category" type="xsd:string" />
+            <xsd:element name="Metal" type="metalType" />
+            <xsd:element name="Gemstone" type="xsd:string"/>
+            <xsd:element name="Price" type="amount" />
+          </xsd:sequence> 
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+</xsd:schema> 
